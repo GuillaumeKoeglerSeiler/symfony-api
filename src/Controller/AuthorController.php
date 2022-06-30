@@ -1,0 +1,31 @@
+<?php
+
+namespace App\Controller;
+
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Annotation\Route;
+
+class AuthorController extends AbstractController
+{
+    /**
+     * @Route("/author", name="app_author")
+     */
+    public function index(): Response
+    {
+        return $this->render('author/index.html.twig', [
+            'controller_name' => 'AuthorController',
+        ]);
+    }
+}
+
+/*
+token user : 
+
+eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2NTY0MjI1MjcsImV4cCI6MTY1NjQyNjEyNywicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoidXNlckBib29rYXBpLmZyIn0.s1tiFkMiEwGWqznPdHXNNRLw8iay7VroOFMIAvmuEqY3qhWRQhCFhYHWOPpNbLKBnwHQ5rrTeu7ZO3HwzECLKF1rTfvcQoJWzIEGVLwVgxdsYaNEfGUSJiX7Ha4220deMaGWt8FZv_76q36IQdNZxUO13ypdYzUgxorYv8LTb2sqOQ6iV3C_WVc-94ZUJb3xWCLeK169sKOcXoiA_40HpGoYYdXMV8eGESUhCdqck_ZEbjXB0xxdxtoo3spOnAj0uw_ml_BW5XYLnSPnWFmcXNNyzQncMaP-yP2MF4TDJVnCd5Ru60jb6rR3HR0Ag_4_0Pnn2VQh8-ssX8EGW7yBJtQLaayNPtQfTrHthDEzLTOWFtsgx5k0t2FEmPGx9uulbJ1T82s6UusBpdu4cJubQD5BhKN4I4xvksucxBOLuVZ3oRo3JUiTDy-_6sn379WYLMFbGNbPkYfWt5FdnaXkzQDmOREWTcJyirQWFSUpvchmNez1wpnUMSFF1EOxV8Nsjums6HhSFioFLJtRaLd-8QS7auysd5VdSOQQHnmxtmo-LX_c2PiDWfHKVdjBAFa_z1VWwvbSS6RuLUb8p2wLsRe6wDuKlwg_ouVLKSUrwlmzJn9w5l7h_gKHF0N-85dGhhEux_UD6eYHtVw8fHxqxLnvNCdVFfOaboA_sbOD6Y0
+
+
+token admin : 
+
+eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2NTY0MjI1NTEsImV4cCI6MTY1NjQyNjE1MSwicm9sZXMiOlsiUk9MRV9BRE1JTiIsIlJPTEVfVVNFUiJdLCJ1c2VybmFtZSI6ImFkbWluQGJvb2thcGkuZnIifQ.Gs1AoUjv-5R-NNohTYGLPNE7ROGYu9XFY6x6ZZH1buIpDrZoL6rljkPv53BFSpM-fmUHQLxEZU-9tnjUl5Jiwy6_fEEaVVFxCnTtugL4M-7twsyy9ANjFWW5AA8Qy8k-QdQlKpz7qHZs0xt77UYpbXySjyFnAuCgNFMXGwnVaeskPoPkvIJ34QRVZb48LIIJu8US3Aqz-eQHEkfQj8sKFmAakebQSwkLWCojcNW2L8QHmmQCUj6sCu8DoO_KIT5FWl3utZHOUdztzCNzEoNTb2raUJbTJgy8OYHOWWHMjnCnuPvYOUAic8UnUO8606yabWHIBikcYCIlKL2wVcenn5AWf2jJrQ_BkFa1bkFmiJgEPI5S8QOdalSgGLG7plumuIduMIYyZUgjN5DI0hi18AaJX5qx4jmm3BVefbHORcbHK_L2R26UCZHl57k1W1VtHG05kWVpH3Wde9r8za4sL7rm-Yn_er133pGQNBaH8i-2T_78aTs-eOVi2k8r_iTtmd3W-IIzhgLdV3CLpE8OqYVoD4Vvf1HJmEryIDzTtz7WTOXhP53bJg24kKIr9FutVmYOBQ76YvA0qDb1tX0E4qx814IsNVzf5UHlqDrffAL4AAXxgQL_-7X3chLgPfrFcaB7BopMveEylnH_2z6y0sl4MGnp_PeW3oajxDITL_E
+*/
